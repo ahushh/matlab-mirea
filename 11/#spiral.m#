@@ -1,0 +1,27 @@
+function spiral(r)
+    count = 1;
+    step  = 1;
+    side = 'o';
+    while true
+        for i=1:step
+            if r.mark
+                break;
+            end
+            r.mark;
+            r.step(side);
+        end
+        if side == 'o'
+            side = 's';
+        elseif side == 's'
+            side = 'w';
+        elseif side == 'w'
+            side = 'n';
+        else % side = 'n'
+            side = 'o';
+        end
+        count = count + 1;
+        if mod(count,2)
+            step = step + 1;
+        end
+    end
+end
