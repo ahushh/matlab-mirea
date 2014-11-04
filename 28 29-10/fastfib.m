@@ -1,3 +1,4 @@
+% Оптимимизированное вычисление числа фибоначчи с помощью рекурсии
 function y = fastfib(n)
     if n < 0
         error('Argument must be a positive number');
