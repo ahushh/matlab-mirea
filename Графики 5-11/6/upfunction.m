@@ -16,13 +16,13 @@ function y = up(x)
     for i = 1:m % сумма
         f = 1;
         for j = 1:n % произведение
-            f = f * g(x,j,i);
+            f = f * g(j,i);
         end
-        y = y + f * cos( pi*x );
+        y = y + f * cos( pi*i*x );
     end
 end
  
-function y = g(x,j,i)
+function y = g(j,i)
     a = (pi*i) / (2^j);
     y = sin(a) / a;
 end
