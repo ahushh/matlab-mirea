@@ -1,9 +1,9 @@
 function yoba(n)
-    axis([-1.5,1.5,-1.5,1.5]);
+    axis([-1,1,-0.5,1.5]);
     T = 1;
     for k=1:n
-        p = Pero(-1.5*T, 0);
-        p.set('lineColor',color);
+        p = Pero(-1.1*T, 0);
+        p.set('lineColor',[rand,rand,rand]);
         for t = (-1.1*T):0.01:(1.1*T)
             if t > 1
                 p.punct(t, 1);
@@ -15,10 +15,6 @@ function yoba(n)
         end
         p.draw;
     end
-end
-
-function z = color()
-    z = [rand, rand, rand];
 end
 
 function y = beta(k, t)
